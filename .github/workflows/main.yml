@@ -1,0 +1,15 @@
+name: CICD pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest #github hosted runner
+    steps:
+      - name: Checkout scm
+        uses: actions/checkout@v3
+      - name: action-maven
+        uses: comchangs/action-maven@v0.4-beta
+        
+        
